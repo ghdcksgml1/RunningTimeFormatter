@@ -202,3 +202,31 @@ System.out.println(RunningTimeFormatter.format(milliSeconds, TimeUnit.MILLISECON
 ```
 
 다음과 같이  startIndex를 1로 설정했으므로 MilliSeconds 기준으로 1개의 단위가 제거 되었다.
+
+<br/><br/>
+
+### 붙이는 기호를 바꾸고 싶을때
+
+> (ms) , (s) 같은 기호가 아니라 밀리초, 초 등으로 바꾸고 싶다면 아래와 같이 간편하게 바꿀 수 있다.
+
+먼저, 코드의 TIME_FORMAT을 찾는다.
+
+<img width="709" alt="스크린샷 2023-07-22 오전 11 10 14" src="https://github.com/ghdcksgml1/RunningTimeFormatter/assets/79779676/0acb3e7c-caac-421c-9d33-7872f53e5e8c">
+
+각각 바꿔준다.
+
+```java
+    // 변경 전
+    private static final String[] TIME_FORMAT = {"(ms)", "(s)", "(m)", "(h)", "(d)"};
+    private static final Long[] TIME_VALUE    = { 1000L,   60L,   60L,   24L, 100000L};
+
+    // 변경 후
+    private static final String[] TIME_FORMAT = {"밀리초", "초", "분", "시", "일"};
+    private static final Long[] TIME_VALUE    = { 1000L,   60L,   60L,   24L, 100000L};
+
+
+Long milliSeconds = 1234L;
+System.out.println(RunningTimeFormatter.format(milliSeconds));
+
+>> 실행결과 : 1초 234밀리초
+```
