@@ -1,10 +1,10 @@
-# RunningTimeFormatter란?
+# 🧮 RunningTimeFormatter란?
 
 > 기존 String.format의 정적인 format 방식을 개선한 정적 클래스이다.
 
-# 사용 방법
+# 🧮 사용 방법
 
-### class를 생성 -> 복붙
+### 🔗 class를 생성 -> 복붙
 
 > 자세한 주석과 사용법은 [RunningTimeFormatter.java](https://github.com/ghdcksgml1/RunningTimeFormatter/blob/main/RunningTimeFormatter.java) 파일 참고
 
@@ -117,7 +117,7 @@ public class RunningTimeFormatter {
 }
 ```
 
-### 기본 방법  
+### 🔗 기본 방법  
 
 > 시간 단위는 MilliSeconds이다.
 
@@ -156,7 +156,7 @@ System.out.println(RunningTimeFormatter.format(milliSeconds));
 
 <br/><br/>
 
-### TimeUnit 옵션 넣기
+### 🔗 TimeUnit 옵션 넣기
 
 > TimeUnit을 통해 원하는 단위로 설정할 수 있다.
 
@@ -183,7 +183,7 @@ TimeUnit.DAYS 까지 지원
 
 <br/><br/>
 
-### format에서 잘라내고 싶은 부분을 설정
+### 🔗 format에서 잘라내고 싶은 부분을 설정
 
 > format에서 잘라내고 싶은 부분은 표시하는 것을 감추는 것을 뜻한다.
 
@@ -205,7 +205,7 @@ System.out.println(RunningTimeFormatter.format(milliSeconds, TimeUnit.MILLISECON
 
 <br/><br/>
 
-### 붙이는 기호를 바꾸고 싶을때
+### 🔗 붙이는 기호를 바꾸고 싶을때
 
 > (ms) , (s) 같은 기호가 아니라 밀리초, 초 등으로 바꾸고 싶다면 아래와 같이 간편하게 바꿀 수 있다.
 
